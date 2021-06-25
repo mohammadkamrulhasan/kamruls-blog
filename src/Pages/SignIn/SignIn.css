@@ -1,0 +1,50 @@
+.signIn{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.5)) 
+    ,url("https://images.pexels.com/photos/4210787/pexels-photo-4210787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size:cover;
+}
+.signInTitle{
+    font-size: 50px;
+}
+.signInForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.signInForm > label{
+    mrgin: 10px 0;
+}
+signInInput{
+    padding: 10px;
+    background-color: white;
+    border: none;
+}
+
+.signInBtn{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.signInRegisterBtn{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
