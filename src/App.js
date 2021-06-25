@@ -12,38 +12,32 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Post from './components/Post/Post';
 
 
 
 
 function App() {
+  const user=false;
   return (
     <Router>
     <NavBar></NavBar>
-    <Register></Register>
-    {/* <SignIn></SignIn>
-    <Settings></Settings>
-    <Write></Write>
-    <Single></Single>
-    < Home></Home> */}
-    <Switch>
-          <Route path="/Home">
+      <Switch>
+          <Route exact path="/Home">
             <Home />
           </Route>
-          <Route exact path="/Register">
-            <Register />
-          </Route>
-          <Route path="/SignIn">
-            <SignIn />
-          </Route>
+          <Route  path="/Register"> {user? <Home/> : <Register/>} </Route>
+          <Route path="/login">  {user? <Home/> : <SignIn />}</Route>
           {/* <Route path="/About">
             <About />
           </Route>
           <Route path="/Contact">
             <Contact />
           </Route> */}
-          <Route path="/Write">
-            <Write />
+          <Route path="/Write"> {user? <Write /> : <Register/>} </Route>
+          <Route path="/Settings"> {user? <Settings/> : <Register/>} </Route>
+          <Route path="/post/:postId">
+            <Single/>
           </Route>
           
         </Switch>
