@@ -1,6 +1,8 @@
 # kamruls-blog
 
-<a href="" alt="">Live Link</a>
+<a href="https://native-retro-blog.web.app" alt="">Live Link</a>
+<a href="https://github.com/mohammadkamrulhasan/native-retro-blog-server/tree/main" alt="">Server Code Link</a>
+
 
 Features of the project:<br>
 1.A blog website that shows blogs on the home page as the UI.<br>
