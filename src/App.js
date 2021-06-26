@@ -13,33 +13,29 @@ import {
   Link
 } from "react-router-dom";
 import Post from './components/Post/Post';
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 
 
 
 function App() {
-  const user=false;
+  const { user } = useContext(Context);
+  // const user=false;
   return (
     <Router>
-    <NavBar></NavBar>
-    <Home />
+    <NavBar></NavBar>    
       <Switch>
-          <Route exact path="/Home">
-            <Home />
-          </Route>
-          <Route  path="/Register"> {user? <Home/> : <Register/>} </Route>
-          <Route path="/login">  {user? <Home/> : <SignIn />}</Route>
-          {/* <Route path="/About">
-            <About />
-          </Route>
-          <Route path="/Contact">
-            <Contact />
-          </Route> */}
-          <Route path="/Write"> {user? <Write /> : <Register/>} </Route>
-          <Route path="/Settings"> {user? <Settings/> : <Register/>} </Route>
-          <Route path="/post/:postId">
-            <Single/>
-          </Route>
+        <Route exact path="/">
+        <Home />
+        </Route>
+        <Route path="/register">{user ? <Home /> : <Register />}</Route>
+        <Route path="/login">{user ? <Home /> : <SignIn/>}</Route>
+        <Route path="/write">{user ? <Write /> : <Register />}</Route>
+        <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
+        <Route path="/post/:postId">
+          <Single />
+        </Route>
           
         </Switch>
     </Router>
